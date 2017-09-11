@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 import SplashScreen from 'react-native-smart-splash-screen';
 
@@ -27,20 +28,32 @@ export default class animaltune1 extends Component {
   
     render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+
+      <ScrollView >
+        <View>
+          <View>
+           <Button title="king kong" >
+            <Image src="./jj.png"/>
+            <Text> hello there</Text>
+           </Button>
+          </View>
+        </View>
+      </ScrollView>
+     
+   /* <View style={styles.container}> 
+      <Text style={styles.welcome}> 
+        Welcome to React Native! 
         </Text>
+         <Text style={styles.instructions}> 
+           To get started, edit index.android.js
+        </Text> 
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+          Double tap R on your keyboard to reload,{'\n'} Shake or press menu button for dev menu
+       </Text>
+   </View> */
+   
     );
-  }
+}
 }
 
 const styles = StyleSheet.create({
