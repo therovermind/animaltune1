@@ -17,6 +17,8 @@ import SplashScreen from 'react-native-smart-splash-screen';
 
 export default class animaltune1 extends Component {
 
+  
+
   componentDidMount () {
      //SplashScreen.close(SplashScreen.animationType.scale, 850, 500)
      SplashScreen.close({
@@ -32,7 +34,7 @@ export default class animaltune1 extends Component {
       <ScrollView >
         <View>
           <View>
-           <Button title="king kong" >
+           <Button title="king kong"  onClick={}>
             <Image src="./jj.png"/>
             <Text> hello there</Text>
            </Button>
