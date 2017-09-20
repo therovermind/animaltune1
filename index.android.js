@@ -8,15 +8,30 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
+  Text,Button,Image,
   View,
   ScrollView
 } from 'react-native';
 import SplashScreen from 'react-native-smart-splash-screen';
+import Sound from 'react-native-sound';
 
 
 export default class animaltune1 extends Component {
 
+ 
+ constructor(props){
+   super(props);
+  const  whoosh = new Sound('whoosh.mp3', Sound.MAIN_BUNDLE, (error) => {
+  if (error) {
+    console.log('failed to load the sound', error);
+    return;
+  }
+  // loaded successfully
+  
+  console.log('duration in seconds: ' + whoosh.getDuration() + 'number of channels: ' + whoosh.getNumberOfChannels());
+});
+ }
+  
   
 
   componentDidMount () {
@@ -27,19 +42,27 @@ export default class animaltune1 extends Component {
         delay: 500,
      })
  }
+
+ hello(){
+   whoosh.play();
+ }
   
     render() {
     return (
 
       <ScrollView >
+        
         <View>
           <View>
-           <Button title="king kong"  onClick={}>
+           <Button title="Lion"  onPress={this.hello.bind(this)}>
             <Image src="./jj.png"/>
-            <Text> hello there</Text>
+            <Text> Lion</Text>
            </Button>
           </View>
         </View>
+
+        
+
       </ScrollView>
      
    /* <View style={styles.container}> 
