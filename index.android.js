@@ -21,12 +21,17 @@ export default class animaltune1 extends Component {
  
  constructor(props){
    super(props);
-  const  whoosh = new Sound('whoosh.mp3', Sound.MAIN_BUNDLE, (error) => {
+   
+    const whoosh = new Sound('whoosh.mp3', Sound.MAIN_BUNDLE, (error) => {
   if (error) {
     console.log('failed to load the sound', error);
+    this.hello.bind(this);
     return;
   }
   // loaded successfully
+  
+  
+
   
   console.log('duration in seconds: ' + whoosh.getDuration() + 'number of channels: ' + whoosh.getNumberOfChannels());
 });
@@ -44,7 +49,7 @@ export default class animaltune1 extends Component {
  }
 
  hello(){
-   whoosh.play();
+   this.whoosh.Play();
  }
   
     render() {
@@ -54,7 +59,7 @@ export default class animaltune1 extends Component {
         
         <View>
           <View>
-           <Button title="Lion"  onPress={this.hello.bind(this)}>
+           <Button title="Lion"  onPress={this.hello}>
             <Image src="./jj.png"/>
             <Text> Lion</Text>
            </Button>
