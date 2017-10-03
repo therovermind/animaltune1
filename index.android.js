@@ -48,8 +48,9 @@ export default class animaltune1 extends Component {
      })
  }
 
- hello(){
-   this.whoosh.Play();
+ hello(){   
+   if(whoosh.isLoaded()){
+   this.whoosh.Play();}
  }
   
     render() {
