@@ -49,7 +49,7 @@ export default class animaltune1 extends Component {
  }
 
  hello(){   
-   if(whoosh.isLoaded()){
+   if(this.whoosh.isLoaded()){
    this.whoosh.Play();}
  }
   
